@@ -18,9 +18,10 @@
       <div class="prototype__body">
         <div class="prototype__detail">
           <p class="detail__title">
-          <%= link_to @prototype.catch_copy, user_path, class: :prototype__user %>
+          <%= link_to @prototype.catch_copy, user_path(@prototype.user.id), class: :prototype__user %>
           </p>
           <p class="detail__message">
+           <%= link_to @prototype.concept, user_path(@prototype.user.id), class: :prototype__user %>
           </p>
         </div>
         <div class="prototype__detail">
